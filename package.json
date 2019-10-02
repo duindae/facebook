@@ -8,6 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e --port 4201",
+    "predeploy": "ng build --base-href=/facebook/",
+    "deploy": "gh-pages -d dist/facebook",
     "protractor": "protractor e2e/protractor.conf.js"
   },
   "private": true,
