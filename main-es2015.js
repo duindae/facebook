@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\n  <h1>Facebook</h1>\n\n  <app-menu></app-menu>\n\n  <router-outlet></router-outlet>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\r\n  <h1>Facebook</h1>\r\n\r\n  <app-menu></app-menu>\r\n\r\n  <router-outlet></router-outlet>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav>\n  <ul class=\"nav nav-pills\">\n    <li class=\"nav-item\"><a class=\"nav-link\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\"\n                            routerLink=\"/\">Home</a></li>\n    <li class=\"nav-item\"><a class=\"nav-link\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\"\n                            routerLink=\"/not-found\">Not found</a></li>\n  </ul>\n</nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav>\r\n  <ul class=\"nav nav-pills\">\r\n    <li class=\"nav-item\"><a class=\"nav-link\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\"\r\n                            routerLink=\"/\">Home</a></li>\r\n    <li class=\"nav-item\"><a class=\"nav-link\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\"\r\n                            routerLink=\"/not-found\">Not found</a></li>\r\n  </ul>\r\n</nav>\r\n");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Home page</h1>\n\n<app-post-list></app-post-list>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Home page</h1>\r\n\r\n<app-post-list></app-post-list>\r\n");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Not found</h1>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Not found</h1>\r\n");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-post-list-item *ngFor=\"let post of posts\" [post]=\"post\"></app-post-list-item>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-post-list-item *ngFor=\"let post of posts\" [post]=\"post\"></app-post-list-item>\r\n\r\n");
 
 /***/ }),
 
