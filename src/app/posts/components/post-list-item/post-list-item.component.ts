@@ -16,11 +16,11 @@ export class PostListItemComponent implements OnInit {
   }
 
   getPostUrl() {
-    return `/posts/${this.post.id}`;
+    return this.post ? `/posts/${this.post.id}` : '';
   }
 
   getPostAuthorAvatarUrl() {
-    return this.post.author.avatarUrl;
+    return (this.post && this.post.author) ? this.post.author.avatarUrl : '';
   }
 
 }
