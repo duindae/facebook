@@ -1,3 +1,5 @@
-export interface IPostList extends Array<IPostList> {
+import {IPost} from './post.interface';
+
+export interface IPostList extends Array<IPost> {
 
 }
