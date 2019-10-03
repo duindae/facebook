@@ -1,0 +1,8 @@
+<ng-container *ngIf="comment">
+  <div class="media my-3">
+    <img class="mr-3" [src]="getCommentAuthorAvatar()" alt="Generic placeholder image">
+    <div class="media-body">
+      {{comment.body}}
+    </div>
+  </div>
+</ng-container>
