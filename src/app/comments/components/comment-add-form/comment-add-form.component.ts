@@ -30,7 +30,7 @@ export class CommentAddFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  onSubmit(formularz) {
     const comment = Object.assign({}, this.comment);
     comment.id = uuid.v4();
     comment.createdTime = new Date().toLocaleDateString();
@@ -38,7 +38,7 @@ export class CommentAddFormComponent implements OnInit {
     comment.author.name = faker.name.findName();
     comment.author.avatarUrl = 'http://placeskull.com/50/50/ff2744/';
     this.addComment.emit(comment);
-
+    formularz.reset();
   }
 
 }

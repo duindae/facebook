@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ICommentList} from '../../../shared/interfaces/comment-list.interface';
 
 @Component({
@@ -8,10 +8,7 @@ import {ICommentList} from '../../../shared/interfaces/comment-list.interface';
 })
 export class CommentListComponent implements OnInit {
 
-  comments = [
-    {id: '123123', body: '123123123123'},
-    {id: '8888', body: 'asgfkjahsfkjahsgf'}
-  ] as ICommentList;
+  @Input() comments: ICommentList = null;
 
   constructor() {
   }
@@ -20,7 +17,6 @@ export class CommentListComponent implements OnInit {
   }
 
   addComment(comment) {
-    console.log('addComment', comment);
     this.comments.push(comment);
   }
 

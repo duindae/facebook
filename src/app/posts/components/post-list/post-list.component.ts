@@ -15,4 +15,8 @@ export class PostListComponent implements OnInit {
   ngOnInit() {
   }
 
+  addPost(post) {
+    this.posts.unshift(post);
+  }
+
 }
