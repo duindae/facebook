@@ -1,12 +1,29 @@
 <form (ngSubmit)="onSubmit(addForm)" #addForm="ngForm">
   <div class="form-group row">
     <div class="col-9">
-      <input type="comment" class="form-control" name="body"
+      <input type="comment"
+             class="form-control"
+             name="body"
              placeholder="Wpisz komentarz"
-             [(ngModel)]="comment.body">
+             [(ngModel)]="comment.body"
+             #body="ngModel"
+             minlength="2"
+             required
+      >
+      <!--      <pre>{{body.errors | json}}</pre>-->
+      <!--      <pre>touched: {{body.touched | json}}</pre>-->
+      <!--      <pre>pristine: {{body.pristine | json}}</pre>-->
+      <!--      <pre>valid: {{body.valid | json}}</pre>-->
+      <!--      <pre>invalid: {{body.invalid | json}}</pre>-->
+      <!--      <pre>dirty: {{body.dirty | json}}</pre>-->
+      <!--      <pre>untouched: {{body.untouched | json}}</pre>-->
+      <small *ngIf="body.errors && body.dirty" class="text-danger">
+        <span *ngIf="body.errors.required">Aby dodać komentarz wpisz tekst</span>
+        <span *ngIf="body.errors.minlength">Za mało znaków! </span>
+      </small>
     </div>
     <div class="col-2">
-      <button type="submit" class="btn btn-primary">Dodaj</button>
+      <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Dodaj</button>
     </div>
   </div>
 </form>
