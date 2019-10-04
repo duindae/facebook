@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ICommentList} from '../../../shared/interfaces/comment-list.interface';
+import {IPost} from '../../../shared/interfaces/post.interface';
 
 @Component({
   selector: 'app-comment-list',
@@ -9,6 +10,8 @@ import {ICommentList} from '../../../shared/interfaces/comment-list.interface';
 export class CommentListComponent implements OnInit {
 
   @Input() comments: ICommentList = null;
+
+  @ViewChild('dialog', {static: true}) dialog = null;
 
   constructor() {
   }
@@ -20,8 +23,15 @@ export class CommentListComponent implements OnInit {
     this.comments.push(comment);
   }
 
-  removeCommentEvent(comment) {
+  removeCommentWithConfirmation(post: IPost) {
+    this.dialog.show();
+    this.dialog.__postToRemove = post;
+  }
+
+  removeCommentEvent() {
+    const comment = this.dialog.__postToRemove;
     this.comments = this.comments.filter(item => item !== comment);
+    this.dialog.hide();
   }
 
 }
