@@ -19,4 +19,8 @@ export class PostListComponent implements OnInit {
     this.posts.unshift(post);
   }
 
+  removePostEvent(comment) {
+    this.posts = this.posts.filter(item => item !== comment);
+  }
+
 }

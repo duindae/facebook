@@ -12,6 +12,7 @@
           <small>{{ post.createdTime | myDate}}</small>
         </a>
       </div>
+      <button class="btn btn-danger" (click)="removePost()">Usuń</button>
     </div>
     <div class="card-body">
       <p class="card-text">{{post.body}}</p>

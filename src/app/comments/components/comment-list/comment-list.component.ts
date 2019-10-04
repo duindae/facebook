@@ -20,4 +20,8 @@ export class CommentListComponent implements OnInit {
     this.comments.push(comment);
   }
 
+  removeCommentEvent(comment) {
+    this.comments = this.comments.filter(item => item !== comment);
+  }
+
 }
